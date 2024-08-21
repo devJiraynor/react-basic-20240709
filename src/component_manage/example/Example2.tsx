@@ -93,10 +93,38 @@ export default function Example2() {
 
     return (
         <div className='table'>
-            <TableHeader />
+            {/* <TableHeader />
             <TableRow { ...employee1 } />
             <TableRow { ...employee2 } />
-            <TableRow { ...employee3 } />
+            <TableRow { ...employee3 } /> */}
+
+            {/* <TableData type='th' />
+            <TableData type='tr' {...employee1} />
+            <TableData type='tr' {...employee2} />
+            <TableData type='tr' {...employee3} /> */}
+
+            <TableHeader />
+            <TableRow { ...employees[0] } />
+            <TableRow { ...employees[1] } />
+            <TableRow { ...employees[2] } />
         </div>
     )
 }
+
+const employees = [
+    {
+        employeeNumber: '202401',
+        employeeName: '홍길동',
+        workState: false
+    },
+    {
+        employeeNumber: '202402',
+        employeeName: '이영희',
+        workState: true
+    },
+    {
+        employeeNumber: '202403',
+        employeeName: '김철수',
+        workState: true
+    }
+];
