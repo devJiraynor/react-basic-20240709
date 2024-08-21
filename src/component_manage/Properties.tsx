@@ -26,7 +26,7 @@ function Child({ title, subTitle, contents, child }: Props) {
             <p>{contents}</p>
             {child}
         </div>
-    )
+    );
 }
 
 export default function Properties() {

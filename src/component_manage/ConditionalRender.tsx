@@ -15,18 +15,18 @@ function IfComponent({ num }: Props) {
     if (num > 0) {
         return (
             <h1 style={{color: 'red'}}>{num}</h1>
-        )
+        );
     }
 
     if (num < 0) {
         return (
             <h1 style={{color: 'blue'}}>{num}</h1>
-        )
+        );
     }
 
     return (
         <h1 style={{color: 'green'}}>{num}</h1>
-    )
+    );
 }
 
 // 삼항 연산자(? :)를 이용한 조건부 렌더링
