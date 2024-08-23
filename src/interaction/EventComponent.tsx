@@ -29,8 +29,7 @@ export default function EventComponent() {
         console.log("change : " + event.target.value);
     };
 
-
-    // 콜백 함수의 매개변수가 event 만 받는 형태가 아니라면
+    // 콜백 함수의 매개변수가 event만 받는 형태가 아니라면
     // 직접적으로 전달하여 사용할 수 없음
     // 그러한 함수를 이벤트에 등록하고자 하면 해당 이벤트 속성에
     // 직접 익명 함수 표현식을 사용하여 선언 후 전달
