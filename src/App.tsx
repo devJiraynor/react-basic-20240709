@@ -11,6 +11,7 @@ import StateComponent from './interaction/StateComponent';
 import ForwordingComponent from './interaction/ForwordingComponent';
 import HookComponent1 from './hook/HookComponent1';
 import HookComponent2 from './hook/HookComponent2';
+import CustomHook from './hook/CustomHook';
 
 function App() {
     return (
@@ -26,7 +27,8 @@ function App() {
             {/* <StateComponent /> */}
             {/* <ForwordingComponent /> */}
             {/* <HookComponent1 /> */}
-            <HookComponent2 />
+            {/* <HookComponent2 /> */}
+            <CustomHook />
         </>
     );
 }
