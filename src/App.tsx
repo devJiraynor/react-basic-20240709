@@ -10,6 +10,7 @@ import EventComponent from './interaction/EventComponent';
 import StateComponent from './interaction/StateComponent';
 import ForwordingComponent from './interaction/ForwordingComponent';
 import HookComponent1 from './hook/HookComponent1';
+import HookComponent2 from './hook/HookComponent2';
 
 function App() {
     return (
@@ -24,7 +25,8 @@ function App() {
             {/* <EventComponent /> */}
             {/* <StateComponent /> */}
             {/* <ForwordingComponent /> */}
-            <HookComponent1 />
+            {/* <HookComponent1 /> */}
+            <HookComponent2 />
         </>
     );
 }
