@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 // Custom hook : 
 // - 리액트에서 훅 함수의 호출은 반드시 함수형 컴포넌트 코드 블럭에서만 호출 가능
@@ -44,11 +44,11 @@ export default function CustomHook() {
 
     const onState1Add = () => {
         setState1(state1 + 1);
-    }
+    };
 
     const onState2Add = () => {
         setState2(state2 + 1);
-    }
+    };
 
     return (
         <div>
