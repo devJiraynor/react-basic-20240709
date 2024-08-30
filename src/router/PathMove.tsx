@@ -33,7 +33,7 @@ export default function PathMove() {
     const navigator = useNavigate();
     const onNavigator = () => {
         navigator('/component');
-    }
+    };
 
     return (
         <div>
