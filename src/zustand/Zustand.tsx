@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { create } from 'zustand';
 
 // zustand 패키지:
@@ -35,10 +35,61 @@ const useStore = create<Store>((set) => ({
     setAddress: (address: string) => set((state) => ({...state, address}))
 }));
 
+interface Props { 
+    address: string;
+}
+
 export default function Zustand() {
 
     // zustand로 선언한 상태 사용 방법
     // const { 상태, ..., 상태 변경 함수, ... } = useStore훅함수();
+    // const { address, setAddress } = useStore();
+    // const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const { value } = event.target;
+    //     setAddress(value);
+    // };
+
+
+    return (
+        <div style={{ padding: '40px', height: '400px', background: 'grey' }}>
+            {/* <h1>{address}</h1>
+            <input value={address} onChange={onChange} /> */}
+            <Sub1Component1 />
+            <Sub1Component2 />
+        </div>
+    )
+}
+
+function Sub1Component1() {
+    return (
+        <div style={{ height: '100px', backgroundColor: 'red' }}>
+            <h4>안녕</h4>
+            <Sub2Component1 />
+        </div>
+    )
+}
+
+function Sub1Component2() {
+    return (
+        <div style={{ marginTop: '40px', height: '100px', backgroundColor: 'red' }}>
+            <Sub2Component2 />
+        </div>
+    )
+}
+
+function Sub2Component1 () {
+
+    const { address } = useStore();
+
+    return (
+        <div style={{ height: '75px', backgroundColor: 'blue' }}>
+            <h3 style={{ color: 'yellow' }}>{address}</h3>
+        </div>
+    )
+}
+
+function Sub2Component2 () {
+
     const { address, setAddress } = useStore();
 
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -47,8 +98,8 @@ export default function Zustand() {
     };
 
     return (
-        <div>
-            <h1>{address}</h1>
+        <div style={{ height: '75px', backgroundColor: 'blue' }}>
+            <h3 style={{ color: 'yellow' }}>{address}</h3>
             <input value={address} onChange={onChange} />
         </div>
     )
